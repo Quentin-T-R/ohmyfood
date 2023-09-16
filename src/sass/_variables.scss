@@ -1,0 +1,18 @@
+@use "sass:color";
+
+$font-primary:'Roboto', sans-serif;
+$font-secondary: "Shrikhand", cursive;
+$font-clr:rgb(24, 24, 24);
+
+$clr-primary:#9356DC;
+$clr-secondary:#FF79DA;
+$clr-tertiary:#99E2D0;
+
+$bg-color-primary:#fff;
+
+@mixin bg-loading{
+    background-color:lighten($clr-primary, 35%);
+}
+@mixin box-shadow{
+    box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.2);
+  }

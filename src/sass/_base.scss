@@ -1,0 +1,203 @@
+@import "./variables";
+@import "./animations";
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    font-family:$font-primary;
+    color:$font-clr;
+    font-size:16px;
+    background-color: $bg-color-primary;
+}
+
+h1{
+    padding:0;
+    margin:0;
+    font-size:1.5rem;
+    font-weight: 900;
+    
+}
+h2{
+    padding:0;
+    margin:0;
+    font-size:1.1rem;
+    font-weight: 700;
+    line-height: 150%;
+}
+
+.header{
+    height: 70px;
+    position:fixed;
+    width: 100%;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.4);
+    background-color:$bg-color-primary;
+    z-index: 100;
+    display:flex;
+    align-items: center;
+    &__icon{
+        color:black;
+    }
+    &__arrow{
+        width:10%;
+        padding:1rem;
+
+    }
+    &__logo{
+        width: 80%;
+        text-align: center;
+        font-family: $font-secondary;
+        font-size:2rem;
+    }
+}
+
+.location{
+    background-color:darken($bg-color-primary, 10%);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding:1rem;
+    color:lighten($font-clr,10%);
+    font-weight: 900;
+    padding-top:85px;
+    &__icon{
+        margin-right: 1rem;
+    }
+}
+.cta{
+    text-align:center;
+    background-color:darken($bg-color-primary, 2%);
+    padding:2rem;
+    margin-bottom:2rem;
+    h1{
+        margin:1rem 0;
+    }
+    &__content{
+        font-weight: 300;
+        color:lighten($font-clr,10%);
+        font-size:1.2rem;
+    }
+}
+
+.container{
+    display:flex;
+    padding:2rem 0;
+    flex-direction:column;
+    @media(min-width:768px){
+        flex-direction: row;
+        flex-wrap:wrap;
+        justify-content: space-between;
+    }
+    @media(min-width:992px){
+        max-width: 80%;
+        margin:0 auto;
+    }
+
+}
+.section-title{
+    @media(min-width:992px){
+        max-width: 80%;
+        margin:0 auto;
+    }
+}
+.how-to{
+    background-color: $bg-color-primary;
+    padding:1rem;
+}
+
+.restaurant{
+    background-color:darken($bg-color-primary, 2%);
+    padding:2rem 1rem;
+}
+
+.footer{
+    padding:1rem;
+    background-color:darken($bg-color-primary, 80%);
+    color:white;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    @media(min-width:992px){
+        justify-content: flex-start;
+        flex-direction:row-reverse;
+        align-items: center;
+    }
+    &__title{
+        font-family:$font-secondary;
+        font-size:1rem;
+        margin:1.3rem 0;
+        font-weight: 100;
+        @media(min-width:992px){
+            margin-right: 50px;
+            margin-top:50px;
+        }
+
+    }
+    &__links{
+        display:flex;
+        flex-direction: column;
+        @media(min-width:992px){
+            flex-direction: row;
+            margin-top:30px;
+            margin-right: 50px;
+        }
+    }
+    &__link{
+        text-decoration: none;
+        color:white;
+        font-size:.8rem;
+        margin-bottom:.7rem;
+        &--icon{
+            margin-right:.5rem;
+        }
+        @media(min-width:992px){
+            margin-right: 10px;
+            margin-bottom:0;
+        }
+    }
+}
+.menu{
+    display:flex;
+    width: 100%;
+    flex-direction: column;
+    background-color:darken($bg-color-primary, 2%);
+    &__container{
+        @media(min-width:992px){
+            max-width: 70%;
+            margin:0 auto;
+            background-color:rgb(236, 236, 236);
+        }
+        
+    }
+    &__img{
+        object-fit: cover;
+        max-height: 400px;
+        width:100%;
+        margin-top:70px;
+    }
+    &__restaurant{
+        background-color:darken($bg-color-primary, 2%);
+        padding:3rem 1rem 1rem 1rem;
+        margin-top:-40px;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        &--name{
+            font-family: $font-secondary;
+            font-size:2rem;
+        }
+        @media(min-width:992px){
+            justify-content: center;
+            background-color:rgb(236, 236, 236);
+            &--name{
+                margin-right:20px;
+            }
+
+        }
+    }
+}
